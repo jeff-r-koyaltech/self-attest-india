@@ -26,6 +26,7 @@ let images = [
     - **IMPORTANT**: make sure it's a PNG file with transparency.
     - (The easiest way to do this is to take a high-res photo of your signature on a white piece of paper. Then in a tool like Photoshop or Gimp, select by color all the white pixels and cut them from the iamge. Save/export as PNG. An example: https://www.youtube.com/watch?reload=9&v=efAOsvfi4sU )
 - Open the file in Chrome, File->Print, and 🎉 you have self-attested documents!
+    - (sample in the Sample Output.pdf file)
 
 It's handy to combine with digital scan services like http://lookslikescanned.com/ . You can really convince them that you killed a bunch of trees to produce this document. 😉
 
