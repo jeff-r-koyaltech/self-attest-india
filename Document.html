@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            div.self-attested {
+                page-break-after: always; /* one self-attested image per page*/
+                display: inline-flex; /* prevent growth of div */
+
+                position: relative;
+                top: 0;
+                right: 0;
+            }
+            div.self-attested img.doc {
+                max-width: 70vw;
+                max-height: 70vh;
+            }
+            div.self-attested img.sig {
+                max-width: 20vw;
+                max-height: 20vh;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <template id="self-attested-template">
+            <div class="self-attested">
+                <img class="doc" src="PLACEHOLDER.jpg" />
+                <img class="sig" src="signature_alpha.png" />
+            </div>
+        </template>
+    </body>
+    <script>
+        let images = [
+        'IMG_0001.JPG',
+        'IMG_0002.JPG',
+        'IMG_0003.JPG',
+        'IMG_0004.JPG'
+        ]
+        let template = document.getElementById('self-attested-template')
+        for(let i = 0; i < images.length; i++) {
+            let templateClone = template.content.cloneNode(true)
+            templateClone.children[0].children[0].src = images[i]
+            document.body.appendChild(templateClone)
+        }
+
+        let sigs = document.getElementsByClassName('sig')
+        for(let i = 0; i < sigs.length; i++) {
+            // +/- 15 degrees random
+            let angle = (Math.floor(Math.random() * Math.floor(30))) - 15
+            console.log(angle)
+            sigs[i].style.setProperty('transform', `rotate(${angle}deg)`)
+            // +/- 30 px offset top and right
+            let offset = angle * 2
+            sigs[i].style.setProperty('top', `${300+offset}px`)
+            sigs[i].style.setProperty('right', `${-110+offset}px`)
+        }
+    </script>
+</html>
