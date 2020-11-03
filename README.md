@@ -1,6 +1,12 @@
 # self-attest-india
 When you need to sign hundreds of pages, and the bureaucrats are going to give you hand cramps.
 
+## What are you talking about?
+
+This: https://legaldesk.com/general/what-is-self-attestation
+
+## OK, how does this help?
+
 Indian law sometimes requires self-attestation. You take a digital copy of your documents (whether an ID, passport, etc) and you sign in blue ink, partially across the picture and off into the whitespace.
 
 Here's a faster way to get your self-attestation done. We'll call it machine-assisted self-attestation.
